@@ -1,0 +1,39 @@
+---
+title: "Advanced Informatics HW1"
+output: html_document
+---
+
+```{r reticulate, include=FALSE}
+library(reticulate)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r setup, include=FALSE}
+library(nycflights13)
+data(flights)
+
+```
+
+```{python}
+import pandas
+print(type(r.flights))
+print(r.flights)
+```
+```{r}
+data(mtcars)
+```
+
+```{python}
+print(r.mtcars.head())
+```
+
+```{python}
+import seaborn as sns
+import matplotlib.pyplot as plt
+g = sns.FacetGrid(r.mtcars, col="cyl")
+g.map(sns.scatterplot,"wt","mpg");
+plt.show()
+```lot,"wt","mpg");
+plt.show()
+```
+```
